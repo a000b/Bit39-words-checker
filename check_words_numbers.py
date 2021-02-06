@@ -37,7 +37,7 @@ if __name__ == '__main__':
     bip39_list = load_words()
 
     if choice == 1:
-        given_seed = input('Enter your seed: ').strip().split(' ')
+        given_seed = input('Enter your seed words separated by spaces:\n').strip().split(' ')
 
         for word in given_seed:
             pos = get_position(word, bip39_list)
@@ -47,7 +47,7 @@ if __name__ == '__main__':
                 print(f'\nErr no position found for {word}')
 
     elif choice == 2:
-        given_positions = input('Enter your numbers: ').strip().split(' ')
+        given_positions = input('Enter your numbers separated by spaces:\n').strip().split(' ')
 
         for number in given_positions:
             word = get_word(int(number), bip39_list)
